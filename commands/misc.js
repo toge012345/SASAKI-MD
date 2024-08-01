@@ -1,3 +1,26 @@
+/**
+ * Copyright (C) 2024 CrazyPrince
+ *
+ * Licensed under the GNU General Public License v3.0 (GPL-3.0)
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @project       CRAZY-MD
+ * @author        CrazyPrince <https://github.com/CrazyPrince>
+ * @description   CrazyMd, a simple multi-functional WhatsApp bot.
+ * @version       0.0.1
+ * @license       GPL-3.0
+ * @link          (https://github.com/CrazyPrince/CRAZY-MD)
+ */
+
  const { tlang, getAdmin, prefix, Config, sck, fetchJson, runtime,cmd,getBuffer } = require('../lib')
  let { dBinary, eBinary } = require("../lib/binary");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
@@ -7,7 +30,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
  cmd({
     pattern: "setwelcome",
     desc: "sets welcome message in specific group.",
-    category: "core",
+    category: "misc",
 },
 async(Void, citel, text,{ isCreator }) => {
     if (!isCreator) return citel.reply(tlang().owner)
@@ -26,7 +49,7 @@ async(Void, citel, text,{ isCreator }) => {
 cmd({
     pattern: "setgoodbye",
     desc: "sets goodbye message in specific group.",
-    category: "core",
+    category: "misc",
 },
 async(Void, citel, text,{ isCreator }) => {
     if (!isCreator) return citel.reply(tlang().owner)
@@ -48,8 +71,8 @@ async(Void, citel, text,{ isCreator }) => {
              filename: __filename,
          },
          async(Void, citel, text) => {
-let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜'},"sticker") 
+let a = await getBuffer(`https://citel-x.herokuapp.com/attp/${text}`)
+ return citel.reply(a,{packname:'Crazy',author:'ATTP'},"sticker") 
          }
      )
  cmd({
@@ -59,8 +82,8 @@ let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=
              filename: __filename,
          },
          async(Void, citel, text) => {
-let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜'},"sticker") 
+let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
+ return citel.reply(a,{packname:'Crazy',author:'TTP'},"sticker") 
          }
      )
      //---------------------------------------------------------------------------
@@ -144,17 +167,17 @@ let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=$
              pattern: "uptime",
              alias: ["runtime"],
              desc: "Tells runtime/uptime of bot.",
-             category: "core",
+             category: "misc",
              filename: __filename,
          },
          async(Void, citel, text) => {
              const upt = runtime(process.uptime())
-             return citel.reply(`Uptime of King-Md: ${upt}`)
+             return citel.reply(`Uptime of ${tlang().title}: ${upt}`)
          }
      )
      //---------------------------------------------------------------------------
  cmd({
-             pattern: "wame",
+             pattern: "wm",
              desc: "Makes wa.me of quoted or mentioned user.",
              category: "misc",
              filename: __filename,
@@ -261,26 +284,15 @@ let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=$
          },
          async(Void, citel, text,{ isCreator }) => {
              if (!text) return citel.reply(`Example : ${prefix}emix 😅,🤔`);
-const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
-             let emoji1 = text.split(",")[0] ;
-             let emoji2 = text.split(",")[1];
-
-  const response = await fetch(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${emoji1}_${emoji2}`);
-  const data = await response.json();
-  if(data.locale=="") return citel.reply(`Can't Create Mixture, Please Try Other Emojies`)
-  else {
-let media =await getBuffer(data.results[0].url)
-
-let sticker = new Sticker(media, {
-                    pack: global.packname, 
-                    author: global.author, 
-                    type: StickerTypes.FULL ,
-                    categories: ["🤩", "🎉"], 
-                    id: "12345", 
-                    quality: 100,
-                });
-const buffer = await sticker.toBuffer();
- return Void.sendMessage(citel.chat, {sticker: buffer}, {quoted: citel });
+             let [emoji1, emoji2] = text.split `,`;
+             let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1 )}_${encodeURIComponent(emoji2)}`);
+             for (let res of anu.results) {
+                 let encmedia = await Void.sendImageAsSticker(citel.chat, res.url, citel, {
+                     packname: global.packname,
+                     author: global.author,
+                     categories: res.tags,
+                 });
+                 await fs.unlinkSync(encmedia);
              }
          }
      )
@@ -288,7 +300,7 @@ const buffer = await sticker.toBuffer();
  cmd({
              pattern: "chatbot",
              desc: "activates and deactivates chatbot.\nuse buttons to toggle.",
-             category: "core",
+             category: "misc",
              filename: __filename
          },
          async(Void, citel, text,{ isCreator }) => {
@@ -341,7 +353,7 @@ const buffer = await sticker.toBuffer();
                              },
                          ];
                          let chatbott= await chatbot.findOne({ id: 'chatbot' })
-                         await Void.sendButtonText(citel.chat, buttons, `Chatbot Status: ${chatbott.worktype} `, 'King-Md', citel);
+                         await Void.sendButtonText(citel.chat, buttons, `Chatbot Status: ${chatbott.worktype} `, 'Crazy-Md', citel);
                         citel.reply(`Chatbot Status: ${chatbott.worktype} \n*Use:* ${prefix}chatbot on\n${prefix}chatbot off`)
                         }
              }
@@ -390,7 +402,7 @@ const buffer = await sticker.toBuffer();
 cmd({
   pattern: "bot",
   desc: "activates and deactivates bot.\nuse buttons to toggle.",
-  category: "core",
+  category: "misc",
   filename: __filename,
 },
 async(Void, citel, text,{isCreator}) => {
@@ -491,12 +503,12 @@ let buttons = [{
     async(Void, citel, text) => {
 let limit = 5;
 try {
-if (!text) return citel.reply("```Uhh Please, Give me Url!```");
+if (!text) return citel.reply("```𝓤𝓱𝓱 𝓟𝓵𝓮𝓪𝓼𝓮, 𝓖𝓲𝓿𝓮 𝓶𝓮 𝓤𝓻𝓵!```");
 let urll = `https://s.vercel.app/api?url=${text.match(/\bhttps?:\/\/\S+/gi)[0]}&width=1280&height=720`
 let media  = await getBuffer(urll)
 return await Void.sendMessage(citel.chat ,{image : media } , {quoted:citel} )
 }
-catch (err) { return citel.reply("```Error While Fetching Snapshot```")}
+catch (err) { return citel.reply("```𝓔𝓻𝓻𝓸𝓻 𝓦𝓱𝓲𝓵𝓮 𝓕𝓮𝓽𝓬𝓱𝓲𝓷𝓰 𝓢𝓷𝓪𝓹𝓼𝓱𝓸𝓽```")}
     }
 )
 
@@ -504,7 +516,7 @@ catch (err) { return citel.reply("```Error While Fetching Snapshot```")}
      //---------------------------------------------------------------------------
  cmd({ on: "body" }, async(Void, citel) => {
      if (Config.autoreaction === 'true' && citel.text.startsWith(prefix)) {
-         const emojis = ['❤', '💕', '😻', '🧡', '💛', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '🎁', '🎈', '👋']
+         const emojis = ['❤', '💕', '🖖🏽', '👍', '👀', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '🎁', '🎈', '👋']
          const emokis = emojis[Math.floor(Math.random() * (emojis.length))]
          Void.sendMessage(citel.chat, {
              react: {
