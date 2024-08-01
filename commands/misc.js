@@ -49,7 +49,7 @@ async(Void, citel, text,{ isCreator }) => {
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://citel-x.herokuapp.com/attp/${text}`)
- return citel.reply(a,{packname:'Secktor',author:'ATTP'},"sticker") 
+ return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'Team sasaki'},"sticker") 
          }
      )
  cmd({
@@ -60,7 +60,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/attp/${text}`)
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
- return citel.reply(a,{packname:'Secktor',author:'TTP'},"sticker") 
+ return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'Team sasaki'},"sticker") 
          }
      )
      //---------------------------------------------------------------------------
@@ -118,7 +118,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
              var author;
              if (text) {
                  anu = text.split("|");
-                 pack = anu[0] !== "" ? anu[0] : citel.pushName + '♥️';
+                 pack = anu[0] !== "" ? anu[0] : citel.pushName + 'Team sasaki';
                  author = anu[1] !== "" ? anu[1] : Config.author;
              } else {
                  pack = citel.pushName;
@@ -149,7 +149,7 @@ let a = await getBuffer(`https://citel-x.herokuapp.com/ttp/${text}`)
          },
          async(Void, citel, text) => {
              const upt = runtime(process.uptime())
-             return citel.reply(`Uptime of ${tlang().title}: ${upt}`)
+             return citel.reply(`Uptime of sasaki-md ${tlang().title}: ${upt}`)
          }
      )
      //---------------------------------------------------------------------------
