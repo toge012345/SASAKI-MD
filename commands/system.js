@@ -1,26 +1,3 @@
-/**
- * Copyright (C) 2024 CrazyPrince
- *
- * Licensed under the GNU General Public License v3.0 (GPL-3.0)
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @project       CRAZY-MD
- * @author        CrazyPrince <https://github.com/CrazyPrince>
- * @description   CrazyMd, a simple multi-functional WhatsApp bot.
- * @version       0.0.1
- * @license       GPL-3.0
- * @link          (https://github.com/CrazyPrince/CRAZY-MD)
- */
-
 const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config ,sleep} = require('../lib')
 const { TelegraPh } = require('../lib/scraper')   
 const util = require('util')
@@ -255,7 +232,8 @@ cmd({
             desc: "is bot alive??"
         },
         async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `*𝓐 𝓫𝓸𝓽 𝓭𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝓒𝓻𝓪𝔃𝔂𝓟𝓻𝓲𝓷𝓬𝓮.*`
+            let alivemessage = Config.ALIVE_MESSAGE || `*BOT DEVELOPED BY TEAM SASAKI
+            *`
             const alivtxt = `
 *Hello, ${citel.pushName},*
 _This is  ${tlang().title}._
@@ -268,7 +246,7 @@ ${alivemessage}
 
 _Type ${prefix}menu for my command list._
 
-_𝓐 𝓫𝓸𝓽 𝓭𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂 𝓒𝓻𝓪𝔃𝔂𝓟𝓻𝓲𝓷𝓬𝓮._
+_𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜._
 `;
             let aliveMessage = {
                 image: {
