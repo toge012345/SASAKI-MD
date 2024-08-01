@@ -1,19 +1,3 @@
-/**
-========================================================
-     ░           |•|
-              SASAKI ░░  MD        |•|
-========================================================
- Copyright (C) 2022.                                                                                        
- Licensed under the  Apache 2.0 License;                                                      
- You may not use this file except in compliance with the License.    
- It is supplied in the hope that it may be useful                                     
- * @project_name : SASAKI-MD                                                                    
- * @author : SASAKI-Official <https://github.com/Alp24ni>   
- * @description : SASAKI-MD ,A Multi-functional whatsapp bot.       
- * @version 2.0.1                                                                                             
- ========================================================
- **/
-
 const { sck, sck1,cmd, jsonformat, botpic, TelegraPh, RandomXP, Config, tlang, warndb, sleep,getAdmin,getBuffer, prefix } = require('../lib')
 const moment = require("moment-timezone");
 const fs = require('fs-extra')
@@ -140,7 +124,7 @@ cmd({
     async(Void, citel, text) => {
         await Void.sendMessage(`${citel.chat}`, {
             image: log0,
-            caption: `*Support : Secktor-Support*\n*Web Link:* https://github.com/Alp24ni/SASAKI-MD`,
+            caption: `*Support : Official KING-MD-Support*\n*Group Link:* https://chat.whatsapp.com/JIJplkiYyrFE4dyFGade43`,
         });
 
     }
@@ -413,55 +397,55 @@ cmd({
             let meh = citel.sender;
             const userq = await Levels.fetch(citel.sender, "RandomXP");
             const lvpoints = userq.level;
-            var role = "✨GOD✨";
+            var role = "GOD✨";
             if (lvpoints <= 2) {
-                var role = "☘️Citizen☘️";
+                var role = "🏳Citizen";
             } else if (lvpoints <= 4) {
-                var role = "🌟Rookie knight🌟";
+                var role = "🌟Rookie knight";
             } else if (lvpoints <= 6) {
-                var role = "🌟knight🌟";
+                var role = "🌟knight";
             } else if (lvpoints <= 8) {
-                var role = "🧙‍🌟Captain Knight🌟";
+                var role = "🧙‍🌟Captain Knight";
             } else if (lvpoints <= 10) {
-                var role = "🌀Baby Wizard✨";
+                var role = "🌀Baby Wizard";
             } else if (lvpoints <= 12) {
-                var role = "🌀Wizard✨";
+                var role = "🌀Wizard";
             } else if (lvpoints <= 14) {
-                var role = "🌀Wizard King🌀";
+                var role = "🌀Wizard King";
             } else if (lvpoints <= 16) {
-                var role = "❄️Baby Mage❄️";
+                var role = "❄Baby Mage";
             } else if (lvpoints <= 18) {
-                var role = "❄️Mage❄️";
+                var role = "❄Mage";
             } else if (lvpoints <= 20) {
-                var role = "❄️Master of Mage❄️";
+                var role = "❄Master of Mage";
             } else if (lvpoints <= 22) {
-                var role = "🌊Child of Nobel🌊";
+                var role = "🌊Child of Nobel";
             } else if (lvpoints <= 24) {
-                var role = "🌊Nobel🌊";
+                var role = "🌊Nobel";
             } else if (lvpoints <= 26) {
-                var role = "🌊Master of Nobel🌊";
+                var role = "🌊Master of Nobel";
             } else if (lvpoints <= 28) {
-                var role = "☇🌪️🌀Child of Speed🌀🌪️";
+                var role = "☇Child of Speed";
             } else if (lvpoints <= 30) {
-                var role = "☇🌪️🌀Dominator Speed🌀🌪️";
+                var role = "☇Dominator Speed";
             } else if (lvpoints <= 32) {
-                var role = "☇❄️🌪️God of Speed🌪️❄️";
+                var role = "☇God of Speed";
             } else if (lvpoints <= 34) {
-                var role = "🌬️Child of Light🌬️";
+                var role = "🌬 Child of Light";
             } else if (lvpoints <= 36) {
-                var role = "🌬️🌀Light🌀🌬️";
+                var role = "🌬 Light";
             } else if (lvpoints <= 38) {
-                var role = "🌪️☄️God of Light☄️🌪️";
+                var role = "🌬 God of Light";
             } else if (lvpoints <= 40) {
-                var role = " ✨🌀Legend X🌀✨";
+                var role = " 🌙 Legend X";
             } else if (lvpoints <= 42) {
-                var role = "🍃Angel🍃 ";
+                var role = "🎇 Angel ";
             } else if (lvpoints <= 44) {
-                var role = "🍃❄️Fallen Angel❄️🍃";
+                var role = "🎇 Fallen Angel";
             } else if (lvpoints <= 46) {
-                var role = "🃏Nearly Devil🃏 ";
+                var role = "🎭 Nearly Devil ";
             } else if (lvpoints <= 55) {
-                var role = "🃏🎭Immortal Devil X🎭🃏 ";
+                var role = "🔥 Immortal Devil X ";
             }
             let ttms = `${userq.xp}` / 8;
             const timenow = moment(moment())
@@ -476,12 +460,12 @@ cmd({
             const profile = `
 *Hii ${citel.pushName},*
 *Here is your profile information*
-*🎭Username🎭:* ${citel.pushName}
-*☄️Bio☄️:* ${bioo}
+*👤Username:* ${citel.pushName}
+*⚡Bio:* ${bioo}
 *🧩Role:* ${role}
-*🍃Level🍃:* ${userq.level}
-*📥Total Messages📥* ${ttms}
-*Powered by ${tlang().title}*
+*🍁Level:* ${userq.level}
+*📥 Total Messages* ${ttms}
+*Powered by King-Md*
 `;
             let buttonMessage = {
                 image: {
@@ -507,63 +491,63 @@ cmd({
         async(Void, citel, text) => {
             const userq = await Levels.fetch(citel.sender, "RandomXP");
             const lvpoints = userq.level;
-            var role = "✨GOD✨";
+            var role = "GOD✨";
             if (lvpoints <= 2) {
-                var role = "🎭Citizen🎭";
+                var role = "🏳Citizen";
             } else if (lvpoints <= 4) {
-                var role = "🌟Rookie Knight🌟";
+                var role = "🌟 Rookie Knight";
             } else if (lvpoints <= 6) {
-                var role = "🌟Knight🌟";
+                var role = "🌟 Knight";
             } else if (lvpoints <= 8) {
-                var role = "🌟Captain Knight🌟";
+                var role = "🌟Captain Knight";
             } else if (lvpoints <= 10) {
-                var role = "🌀Baby Wizard🌀";
+                var role = "🌀 Baby Wizard";
             } else if (lvpoints <= 12) {
-                var role = "🌀✨Wizard✨🌀";
+                var role = "🌀  Wizard";
             } else if (lvpoints <= 14) {
-                var role = "🌀🌪️Wizard King🌪️🌀";
+                var role = "🌀 Wizard King";
             } else if (lvpoints <= 16) {
-                var role = "💧🎭Baby Mage🎭💧";
+                var role = "💧Baby Mage";
             } else if (lvpoints <= 18) {
-                var role = "💧🍃Mage🍃💧";
+                var role = "💧 Mage";
             } else if (lvpoints <= 20) {
-                var role = "❄️🌪️Master of Mage🌪️❄️";
+                var role = "💧 Master of Mage";
             } else if (lvpoints <= 22) {
-                var role = "❄️Child Of Nobel❄️";
+                var role = "❄ Child Of Nobel";
             } else if (lvpoints <= 24) {
-                var role = "❄️🌀Nobel🌀❄️";
+                var role = "❄ Nobel";
             } else if (lvpoints <= 26) {
-                var role = "❄🍃Master Of Nobel🍃❄️";
+                var role = "❄ Master Of Nobel";
             } else if (lvpoints <= 28) {
-                var role = "☇ 🍁Baby Speed🍁";
+                var role = "☇ Baby Speed";
             } else if (lvpoints <= 30) {
-                var role = "☇🎭🍃Dominator Speed🍃🎭";
+                var role = "☇ Dominator Speed";
             } else if (lvpoints <= 32) {
-                var role = "☇⚡✨God Of Speed✨⚡";
+                var role = "☇ God Of Speed";
             } else if (lvpoints <= 34) {
-                var role = "🌬️Child Of Light🌬️";
+                var role = "🌬 Child Of Light";
             } else if (lvpoints <= 36) {
-                var role = "🌬️🌪️Light🌪️🌬️";
+                var role = "🌬 Light";
             } else if (lvpoints <= 38) {
-                var role = "🌬️❄️God Of Light❄️🌬️";
+                var role = "🌬 God Of Light";
             } else if (lvpoints <= 40) {
-                var role = "🃏Legend X🃏";
+                var role = "🌙 Legend X";
             } else if (lvpoints <= 42) {
-                var role = "🌊Angel🌊";
+                var role = "🎇 Angel";
             } else if (lvpoints <= 44) {
-                var role = "🌊🌬️Fallen Angel🌬️🌊";
+                var role = "🎇 Fallen Angel";
             } else if (lvpoints <= 46) {
-                var role = "🎭Nearly Devil!🎭";
+                var role = "🎭 Nearly Devil!";
             } else if (lvpoints <= 55) {
-                var role = "🃏🎭Immortal Devil X🎭🃏";
+                var role = "🔥Immortal Devil X";
             }
             let disc = citel.sender.substring(3, 7);
             let textr = '';
             textr += `*Hii ${tlang().greet} ,🌟 ${citel.pushName}∆${disc}'s* Exp\n\n`;
             let ttms = `${userq.xp}` / 8;
-            textr += `*🌟Role*: ${role}\n*🔵Exp*: ${userq.xp} / ${Levels.xpFor(
+            textr += `*🌟Role*: ${role}\n*🟢Exp*: ${userq.xp} / ${Levels.xpFor(
     userq.level + 1
-  )}\n*🌬️Level*: ${userq.level}\n*Total Messages:*- ${ttms}`;
+  )}\n*🏡Level*: ${userq.level}\n*Total Messages:*- ${ttms}`;
             try {
                 ppuser = await Void.profilePictureUrl(citel.sender, "image");
             } catch {
@@ -586,7 +570,7 @@ cmd({
             filename: __filename,
         },
         async(Void, citel) => {
-            const fetchlb = await Levels.fetchLeaderboard("RandomXP", 10);
+            const fetchlb = await Levels.fetchLeaderboard("RandomXP", 5);
             let leadtext = `
 *-------------------------------*
 *----● LeaderBoard ● -----*
@@ -594,55 +578,55 @@ cmd({
 \n\n`
             for (let i = 0; i < fetchlb.length; i++) {
                 const lvpoints = fetchlb[i].level
-                var role = "✨GOD✨";
+                var role = "GOD✨";
                 if (lvpoints <= 2) {
-                    var role = "🎭Citizen🎭";
+                    var role = "🏳Citizen";
                 } else if (lvpoints <= 4) {
-                    var role = "🌟Rookie Knight🌟";
+                    var role = "🌟 Rookie Knight";
                 } else if (lvpoints <= 6) {
-                    var role = "🌟Knight🌟";
+                    var role = "🌟 Knight";
                 } else if (lvpoints <= 8) {
-                    var role = "🌟🌪️Captain Knight🌪️🌟";
+                    var role = "🌟 Captain Knight";
                 } else if (lvpoints <= 10) {
-                    var role = "🌀Baby Wizard🌀";
+                    var role = "🌀 Baby Wizard";
                 } else if (lvpoints <= 12) {
-                    var role = "🌀Wizard🌀";
+                    var role = "🌀 Wizard";
                 } else if (lvpoints <= 14) {
-                    var role = "🌀🍃Wizard King🍃🌀";
+                    var role = "🌀 Wizard King";
                 } else if (lvpoints <= 16) {
-                    var role = "💧Baby Mage💧";
+                    var role = "💧 Baby Mage";
                 } else if (lvpoints <= 18) {
-                    var role = "💧🍃Mage🍃💧";
+                    var role = "💧 Mage";
                 } else if (lvpoints <= 20) {
-                    var role = "💧❄️Master Of Mage❄️💧";
+                    var role = "💧 Master Of Mage";
                 } else if (lvpoints <= 22) {
-                    var role = "❄️Child Of Nobel❄️";
+                    var role = "❄ Child Of Nobel";
                 } else if (lvpoints <= 24) {
-                    var role = "❄️🍃Nobel🍃❄️";
+                    var role = "❄ Nobel";
                 } else if (lvpoints <= 26) {
-                    var role = "❄️☘️Master Of Nobel☘️❄️";
+                    var role = "❄ Master Of Nobel";
                 } else if (lvpoints <= 28) {
-                    var role = "☇ ⚡Child Of Speed⚡";
+                    var role = "☇ Child Of Speed";
                 } else if (lvpoints <= 30) {
-                    var role = "☇🃏⚡Dominator Speed⚡🃏";
+                    var role = "☇ Dominator Speed";
                 } else if (lvpoints <= 32) {
-                    var role = "☇🎭🃏God Of Speed🃏🎭";
+                    var role = "☇ God Of Speed";
                 } else if (lvpoints <= 34) {
-                    var role = "🌬️Baby Light🌬️";
+                    var role = "🌬 Baby Light";
                 } else if (lvpoints <= 36) {
-                    var role = "🌬️🌪️Light🌪️🌬️";
+                    var role = "🌬 Light";
                 } else if (lvpoints <= 38) {
-                    var role = "🌬️🌀God Of Light🌀🌬️";
+                    var role = "🌬 God Of Light";
                 } else if (lvpoints <= 40) {
-                    var role = "🍃Legend X🍃";
+                    var role = "🌙 Legend X";
                 } else if (lvpoints <= 42) {
-                    var role = "☘️Angel☘️";
+                    var role = "🎇 Angel";
                 } else if (lvpoints <= 44) {
-                    var role = "☘️🍃Fallen Angel🍃☘️";
+                    var role = "🎇 Fallen Angel";
                 } else if (lvpoints <= 46) {
-                    var role = "🎭Nearly Devil🎭";
+                    var role = "🎭 Nearly Devil";
                 } else if (lvpoints <= 55) {
-                    var role = "🃏Immortal Devil X🃏";
+                    var role = "🔥Immortal Devil X";
                 }
                 let data = await sck1.findOne({ id: fetchlb[i].userID })
                 let namew = fetchlb[i].userID
@@ -1062,55 +1046,55 @@ cmd({ on: "text" }, async(Void, citel) => {
     if (hasLeveledUp) {
         const sck1 = await Levels.fetch(citel.sender, "RandomXP");
         const lvpoints = sck1.level;
-        var role = "✨GOD✨";
+        var role = "GOD";
         if (lvpoints <= 2) {
-            var role = "🎭Citizen🎭";
+            var role = "🏳Citizen";
         } else if (lvpoints <= 4) {
-            var role = "🌟Rookie Knight🌟";
+            var role = "🌟 Rookie Knight";
         } else if (lvpoints <= 6) {
-            var role = "🌟Knight🌟";
+            var role = "🌟 Knight";
         } else if (lvpoints <= 8) {
-            var role = "🌟Captain Knight🌟";
+            var role = "🌟 Captain Knight";
         } else if (lvpoints <= 10) {
-            var role = "🌀Baby Wizard🌀";
+            var role = "🌀 Baby Wizard";
         } else if (lvpoints <= 12) {
-            var role = "🌀🍃Wizard🍃🌀";
+            var role = "🌀 Wizard";
         } else if (lvpoints <= 14) {
-            var role = "🌀🍃Wizard King🍃🌀";
+            var role = "🌀 Wizard King";
         } else if (lvpoints <= 16) {
-            var role = "💧Baby Mage💧";
+            var role = "💧 Baby Mage";
         } else if (lvpoints <= 18) {
-            var role = "💧Mage💧";
+            var role = "💧 Mage";
         } else if (lvpoints <= 20) {
-            var role = "💧🍃Master Of Mage🍃💧";
+            var role = "💧 Master Of Mage";
         } else if (lvpoints <= 22) {
-            var role = "❄️Child Of Nobel❄️";
+            var role = "❄ Child Of Nobel";
         } else if (lvpoints <= 24) {
-            var role = "❄️Nobel❄️";
+            var role = "❄ Nobel";
         } else if (lvpoints <= 26) {
-            var role = "❄️🍃Master Of Nobel🍃❄️";
+            var role = "❄ Master Of Nobel";
         } else if (lvpoints <= 28) {
-            var role = "☇⚡Child of Speed⚡";
+            var role = "☇ Child of Speed";
         } else if (lvpoints <= 30) {
-            var role = "☇⚡✨Dominator Speed✨⚡";
+            var role = "☇ Dominator Speed";
         } else if (lvpoints <= 32) {
-            var role = "☇⚡🍃God of Speed🍃⚡";
+            var role = "☇ God of Speed ";
         } else if (lvpoints <= 34) {
-            var role = "🌬️Child Of Light🌬️";
+            var role = "🌬 Child Of Light";
         } else if (lvpoints <= 36) {
-            var role = "🌬️Light🌬️";
+            var role = "🌬 Light";
         } else if (lvpoints <= 38) {
-            var role = "🌬🍃Master Of Light🍃🌬️";
+            var role = "🌬 Master Of Light";
         } else if (lvpoints <= 40) {
-            var role = "☘️Legend X☘️";
+            var role = "🌙 Legend X";
         } else if (lvpoints <= 42) {
-            var role = "🍃Angel🍃";
+            var role = "🎇 Angel";
         } else if (lvpoints <= 44) {
-            var role = "🍃🌪️Fallen Angel X🌪️🍃";
+            var role = "🎇 Fallen Angel X";
         } else if (lvpoints <= 46) {
-            var role = "🎭Nearly Devil🎭";
+            var role = "🎭 Nearly Devil";
         } else if (lvpoints <= 55) {
-            var role = "🃏🎭Immortal Devil X🎭🃏";
+            var role = "🔥Immortal Devil X";
         } else {
             var role = "Kiddo";
         }
@@ -1123,10 +1107,10 @@ cmd({ on: "text" }, async(Void, citel) => {
 ╔
 ║ *Wow,Someone just*
 ║ *leveled Up huh🔥*
-║ *🎭Name🎭*: ${citel.pushName}
-║ *🌊Level🌊*: ${sck1.level}🌀
-║ *🌀Exp*: ${sck1.xp} / ${Levels.xpFor(sck1.level + 2)}
-║ *🃏Role*: *${role}*
+║ *👤Name*: ${citel.pushName}
+║ *⚡Level*: ${sck1.level}🌀
+║ *💫Exp*: ${sck1.xp} / ${Levels.xpFor(sck1.level + 1)}
+║ *📍Role*: *${role}*
 ║ *Enjoy🥳*
 ╚
 `,

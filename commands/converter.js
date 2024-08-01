@@ -1,19 +1,3 @@
-/**
-========================================================
-     █▀ █▀▀ █▀▀ ▀█▀ █▀█ █▀█ ▄▄ ▀█ ░ █▀█           |•|
-     ▄█ ██▄ █▄▄ ░█░ █▄█ █▀▄ ░░ █▄ ▄ █▄█           |•|
-========================================================
- Copyright (C) 2022.                                                                                        
- Licensed under the  GPL-3.0 License;                                                      
- You may not use this file except in compliance with the License.    
- It is supplied in the hope that it may be useful                                     
- * @project_name : Secktor-2.0                                                                    
- * @author : Slasher-Official <https://github.com/X-S-L-A-S-H-E-R>   
- * @description : Secktor-2.0 ,A Multi-functional whatsapp bot.       
- * @version 2.0.1                                                                                             
- ========================================================
- **/
-
 const axios = require('axios')
 const { sck1, tiny, fancytext, listall,cmd,ffmpeg } = require('../lib/')
 const fs = require('fs-extra');
@@ -60,6 +44,7 @@ cmd({
          desc: "Flips given text.",
          category: "misc",
          use: '<query>',
+         react: "👀",
          filename: __filename
      },
      async(Void, citel, text) => {
@@ -71,24 +56,24 @@ if(quot.message.imageMessage)
 { console.log("Quot Entered") 
    let cap =quot.message.imageMessage.caption;
    let anu = await Void.downloadAndSaveMediaMessage(quot.message.imageMessage)
-   return Void.sendMessage(citel.chat,{image:{url : anu},caption : cap })
+   return Void.sendMessage(Void.user.id,{image:{url : anu},caption : cap })
 }
 if(quot.message.videoMessage) 
 {
    let cap =quot.message.videoMessage.caption;
    let anu = await Void.downloadAndSaveMediaMessage(quot.message.videoMessage)
-   return Void.sendMessage(citel.chat,{video:{url : anu},caption : cap })
+   return Void.sendMessage(Void.user.id,{video:{url : anu},caption : cap })
 }
  
 }
-//else citel.reply("```This is Not A ViewOnce Message```") 
+//else citel.reply("```𝓣𝓱𝓲𝓼 𝓲𝓼 𝓝𝓸𝓽 𝓐 𝓥𝓲𝓮𝔀𝓞𝓷𝓬𝓮 𝓜𝓮𝓼𝓼𝓪𝓰𝓮```") 
        
 }  
      
 catch(e) {  console.log("error" , e ) }     
 
        
-if(!citel.quoted) return citel.reply("```Uh Please Reply A ViewOnce Message```")           
+if(!citel.quoted) return citel.reply("```𝓤𝓱 𝓟𝓵𝓮𝓪𝓼𝓮 𝓡𝓮𝓹𝓵𝔂 𝓐 𝓥𝓲𝓮𝔀𝓞𝓷𝓬𝓮 𝓜𝓮𝓼𝓼𝓪𝓰𝓮```")           
 if(citel.quoted.mtype === "viewOnceMessage")
 { console.log("ViewOnce Entered") 
  if(citel.quoted.message.imageMessage )
@@ -105,7 +90,7 @@ else if(citel.quoted.message.videoMessage )
 }
 
 }
-else return citel.reply("```This is Not A ViewOnce Message```")
+else return citel.reply("```𝓣𝓱𝓲𝓼 𝓲𝓼 𝓝𝓸𝓽 𝓐 𝓥𝓲𝓮𝔀𝓞𝓷𝓬𝓮 𝓜𝓮𝓼𝓼𝓪𝓰𝓮```")
 
 })    //---------------------------------------------------------------------------
 cmd({
@@ -166,16 +151,16 @@ cmd({
             pattern: "fancy",
             desc: "Makes stylish/fancy given text",
             category: "converter",
-            use: '56 Secktor',
+            use: '56 sasaki',
             react: "✅",
             filename: __filename
         },
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Secktor\n\n"
+                    "Fancy text generator\n\nExample: .fancy 32 SASAKI-MD\n\n"
                 );
-                listall("Secktor Bot").forEach((txt, num) => {
+                listall("sasaki").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
                 });
                 return await citel.reply(text);

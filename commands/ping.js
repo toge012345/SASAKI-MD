@@ -10,6 +10,6 @@ Secktor.cmd({
         const { key } = await Void.sendMessage(citel.chat, {text: '```Authorizing...```'});
         var final = new Date().getTime();
        // await Secktor.sleep(1000)
-       return await Void.sendMessage(citel.chat, {text: '*𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃!!*\n *' + (final - inital) + ' ms* ', edit: key});
+       return await Void.sendMessage(citel.chat, {text: '*Lᴀᴛᴇɴᴄʏ*\n *' + (final - inital) + ' ms* ', edit: key});
     }
 );

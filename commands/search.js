@@ -1,3 +1,26 @@
+/**
+ * Copyright (C) 2024 CrazyPrince
+ *
+ * Licensed under the GNU General Public License v3.0 (GPL-3.0)
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @project       CRAZY-MD
+ * @author        CrazyPrince <https://github.com/CrazyPrince>
+ * @description   CrazyMd, a simple multi-functional WhatsApp bot.
+ * @version       0.0.1
+ * @license       GPL-3.0
+ * @link          (https://github.com/CrazyPrince/CRAZY-MD)
+ */
+
 const moment = require('moment-timezone')
 const {fetchJson,cmd, tlang } = require('../lib')
 let gis = require("async-g-i-s");
@@ -72,8 +95,14 @@ cmd({
             textw += `*Longitude:-* ${wdata.data.coord.lon}\n`;
             textw += `*Country:-* ${wdata.data.sys.country}\n`;
 
+            Void.sendMessage(
+                citel.chat, {
+                    text: textw,
+                }, {
+                    quoted: citel,
+                }
+            );
 
-            return await citel.reply(textw)
         }
     )
     //---------------------------------------------------------------------------
@@ -123,7 +152,7 @@ cmd({
         filename: __filename,
     },
     async(Void, citel, text) => {
-        if (!text) return citel.reply(`give me a query\n*Example : .google Who is Slasher-Official.*`);
+        if (!text) return citel.reply(`give me a query\n*Example : .google Who is Suhail Tech.*`);
         let google = require('google-it');
         google({ 'query': text}).then(res => {
             let msg= `Google Search From : ${text} \n\n`;
@@ -155,8 +184,17 @@ cmd({
             for (let i = 0; i < nn; i++) {
 
                 let n = await gis(name1)
-                    images = n[Math.floor(Math.random() * n.length)].url;
-                    await Void.sendMessage(citel.chat, {image: {  url: images,}, caption: `_Secktor-2.0 Image Search_\n*${name1}*`,}, { quoted: citel, });
+                images = n[Math.floor(Math.random() * n.length)].url;
+                    let buttonMessage = {
+                        image: {
+                            url: images,
+                        },
+                        caption: `_Sector Image Search_\n*${name1}*`,
+                        headerType: 4,
+                    };
+                    Void.sendMessage(citel.chat, buttonMessage, {
+                        quoted: citel,
+                    });
             }
         }
     )
@@ -179,12 +217,12 @@ cmd({
         pattern: "iswa",
         category: "search",
         desc: "Searches in given rage about given number.",
-        use: '241051141xx',
+        use: '9112345678xx',
         filename: __filename,
     },
     async(Void, citel, text) => {
         var inputnumber = text.split(" ")[0]
-        if (!inputnumber.includes('x')) return citel.reply('You did not add x\nExample: iswa 241051141xx')
+        if (!inputnumber.includes('x')) return citel.reply('You did not add x\nExample: iswa 9196285162xx')
         citel.reply(`Searching for WhatsApp account in given range...`)
 
         function countInstances(string, word) {
@@ -194,9 +232,13 @@ cmd({
         var number1 = inputnumber.split('x')[countInstances(inputnumber, 'x')] ? inputnumber.split('x')[countInstances(inputnumber, 'x')] : ''
         var random_length = countInstances(inputnumber, 'x')
         var randomxx;
-        if (random_length == 1) {   randomxx = 10 } 
-        else if (random_length == 2) { randomxx = 100  } 
-        else if (random_length == 3) {randomxx = 1000  }
+        if (random_length == 1) {
+            randomxx = 10
+        } else if (random_length == 2) {
+            randomxx = 100
+        } else if (random_length == 3) {
+            randomxx = 1000
+        }
         var text = `*--『 List of Whatsapp Numbers 』--*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
         var nowhatsapp = `\n*Numbers with no WhatsApp account within provided range.*\n`
@@ -227,12 +269,13 @@ cmd({
                 if (anu1 == '401' || anu1.status.length == 0) {
                     nobio += `wa.me/${anu[0].jid.split("@")[0]}\n`
                 } else {
-                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz('Asia/Kolkata').format('HH:mm:ss DD/MM/YYYY')}\n\n`
+                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz('Etc/GMT').format('HH:mm:ss DD/MM/YYYY')}\n\n`
                 }
-            } catch { nowhatsapp += `${number0}${i}${number1}\n` }
+            } catch {
+                nowhatsapp += `${number0}${i}${number1}\n`
+            }
         }
         citel.reply(`${text}${nobio}${nowhatsapp}`)
 
     }
 )
-
