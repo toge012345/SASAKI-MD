@@ -1,19 +1,3 @@
-/**
-========================================================
-      █▄▀ █ █▄ █ ▄▀     █▄ ▄█ █▀▄
-      █ █ █ █ ▀█ ▀▄█ ▀▀ █ ▀ █ █▄▀
-========================================================
- Copyright (C) 2022.                                                                                        
- Licensed under the  GPL-3.0 License;                                                      
- You may not use this file except in compliance with the License.    
- It is supplied in the hope that it may be useful                                     
- * @project_name : KING-MD                                                                    
- * @author : naveeddogar <https://github.com/naveeddogar>   
- * @description : KING-MD ,A Multi-functional whatsapp bot.       
- * @version 1.0.1                                                                                             
- ========================================================
- **/
-
  const { tlang, getAdmin, prefix, Config, sck, fetchJson, runtime,cmd,getBuffer } = require('../lib')
  let { dBinary, eBinary } = require("../lib/binary");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
@@ -65,7 +49,7 @@ async(Void, citel, text,{ isCreator }) => {
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'King-Md',author:'Naveed'},"sticker") 
+ return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜'},"sticker") 
          }
      )
  cmd({
@@ -76,7 +60,7 @@ let a = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=GataDios&text=
          },
          async(Void, citel, text) => {
 let a = await getBuffer(`https://api.lolhuman.xyz/api/ttp?apikey=GataDios&text=${text}`)
- return citel.reply(a,{packname:'King-Md',author:'Naveed'},"sticker") 
+ return citel.reply(a,{packname:'𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃',author:'𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜'},"sticker") 
          }
      )
      //---------------------------------------------------------------------------
