@@ -1,26 +1,3 @@
-/**
- * Copyright (C) 2024 CrazyPrince
- *
- * Licensed under the GNU General Public License v3.0 (GPL-3.0)
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @project       CRAZY-MD
- * @author        CrazyPrince <https://github.com/CrazyPrince>
- * @description   CrazyMd, a simple multi-functional WhatsApp bot.
- * @version       0.0.1
- * @license       GPL-3.0
- * @link          (https://github.com/CrazyPrince/CRAZY-MD)
- */
-
 const axios = require('axios')
 const { sck1, tiny, fancytext, listall,cmd,ffmpeg } = require('../lib/')
 const fs = require('fs-extra');
@@ -174,16 +151,16 @@ cmd({
             pattern: "fancy",
             desc: "Makes stylish/fancy given text",
             category: "converter",
-            use: '56 Secktor',
+            use: '56 sasaki',
             react: "✅",
             filename: __filename
         },
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Crazy\n\n"
+                    "Fancy text generator\n\nExample: .fancy 32 SASAKI-MD\n\n"
                 );
-                listall("CrazyPrince").forEach((txt, num) => {
+                listall("sasaki").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
                 });
                 return await citel.reply(text);
