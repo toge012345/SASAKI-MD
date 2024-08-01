@@ -3,7 +3,7 @@ if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname+'/co
 
 
 //═══════[Required Variables]════════\\
-process.env.OWNER_NUMBER = process.env.OWNER_NUMBER || '24105114159,242069953931'
+process.env.OWNER_NUMBER = process.env.OWNER_NUMBER || '242069953931'
 global.owner = process.env.OWNER_NUMBER.split(",")
 global.mongodb = process.env.MONGODB_URI || "mongodb+srv://Krishna:pss968048@cluster0.4rfuzro.mongodb.net/?retryWrites=true&w=majority"
 global.port= process.env.PORT || 5000
@@ -11,8 +11,8 @@ global.email = 'deathsgun2.0@gmail.com'
 global.github = 'https://github.com/Alp24ni/SASAKI-MD'
 global.location = 'Africa, Gabon, Libreville'
 global.gurl = 'https://instagram.com/lawliet.kfx' // add your username
-global.sudo = process.env.SUDO || '24105114159,242069953931'
-global.devs = '24105114159,242069953931';
+global.sudo = process.env.SUDO || '242069953931'
+global.devs = '242069953931';
 global.website = 'https://github.com/Alp24ni/SASAKI-MD' //wa.me/+242069953931
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/acf07e2ad76c2c142c3b9.jpg'
 module.exports = {
