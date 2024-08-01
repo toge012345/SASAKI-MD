@@ -1,26 +1,3 @@
-/**
- * Copyright (C) 2024 CrazyPrince
- *
- * Licensed under the GNU General Public License v3.0 (GPL-3.0)
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @project       CRAZY-MD
- * @author        CrazyPrince <https://github.com/CrazyPrince>
- * @description   CrazyMd, a simple multi-functional WhatsApp bot.
- * @version       0.0.1
- * @license       GPL-3.0
- * @link          (https://github.com/CrazyPrince/CRAZY-MD)
- */
-
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
 const { mediafire } = require("../lib/mediafire.js");
 const googleTTS = require("google-tts-api");
@@ -48,7 +25,7 @@ cmd({
             desc: "text to speech.",
             category: "downloader",
             filename: __filename,
-            use: '<Hii,this is Secktor>',
+            use: '<Hii,this is sasaki-md>',
         },
         async(Void, citel, text) => {
             if (!text) return citel.reply('Please give me Sentence to change into audio.')
