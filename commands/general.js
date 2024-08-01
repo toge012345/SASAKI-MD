@@ -1,26 +1,3 @@
-/**
- * Copyright (C) 2024 CrazyPrince
- *
- * Licensed under the GNU General Public License v3.0 (GPL-3.0)
- * You may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     (https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c)
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- * @project       CRAZY-MD
- * @author        CrazyPrince <https://github.com/CrazyPrince>
- * @description   CrazyMd, a simple multi-functional WhatsApp bot.
- * @version       0.0.1
- * @license       GPL-3.0
- * @link          (https://github.com/CrazyPrince/CRAZY-MD)
- */
-
 const { tlang, botpic, cmd, prefix, runtime, Config , sleep } = require('../lib')
 const axios = require('axios')
 const speed = require('performance-now')
@@ -31,7 +8,7 @@ cmd({
     alias :['gpt'],
     desc: "chat with an AI(GPT)",
     category: "AI",
-    use: '<Hii,CrazyMd>',
+    use: '<Hii,sasaki>',
     filename: __filename,
 },
 async(Void, citel,text) => {
@@ -146,17 +123,17 @@ cmd({
   category: "general",
   filename: __filename,
 }, async (Void, citel) => {
-  const owner = 'CrazyPrince'; 
-  const repo = 'CRAZY-MD-v2'; 
-  const { stars, forks } = await getRepoStarsAndForks('CrazyPrince', 'CRAZY-MD-v2');
+  const owner = 'Alp24ni'; 
+  const repo = 'SASAKI-MD'; 
+  const { stars, forks } = await getRepoStarsAndForks('https://api.github.com/repos/Alp24ni/SASAKI-MD');
   let cap = `Hey ${citel.pushName}\n
 *❲❒❳ Total Stars:* ${stars} stars
 *❲❒❳ Forks:* ${forks} forks
-*❲❒❳ Repo:* github.com\kenvofc\CRAZY-MD
-*❲❒❳ Group:* https://chat.whatsapp.com/Hyurt8L1oiDAXg0dadZ5mp
+*❲❒❳ Repo:* https://github.com/Alp24ni/SASAKI-MD
+*❲❒❳ Group:* https://chat.whatsapp.com/IdB2EfQiNlKBekQrigN9m9
 *❲❒❳ Deploy Your Own:*
 https://dashboard.render.com/login`;
-  let capp = `ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀᴀᴢʏ-ᴍᴅ²³⁷`;
+  let capp = `𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜`;
   let buttonMessaged = {
     image: { url: await botpic() },
     caption: cap,
@@ -164,12 +141,12 @@ https://dashboard.render.com/login`;
     headerType: 4,
     contextInfo: {
       externalAdReply: {
-        title: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀᴀᴢʏ-ᴍᴅ²³⁷",
+        title: "𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜",
         body: "(ᴄʟɪᴄᴋ ʜᴇʀᴇ)",
         thumbnail: log0,
         mediaType: 4,
         mediaUrl: '',
-        sourceUrl: `https://whatsapp.com/channel/0029VaV3DymGE56jsC8j1M3c`,
+        sourceUrl: `https://whatsapp.com/channel/0029VaahaCWDzgTKeG9S7u1W`,
       },
     },
   };
@@ -233,8 +210,8 @@ cmd({
 async(Void, citel,text,{isCreator}) => {
 
 if(!isCreator) return citel.reply(tlang().owner);
-let str="*𝓐𝓵𝓵 𝓪𝓿𝓪𝓲𝓵𝓪𝓫𝓵𝓮 𝓽𝓱𝓮𝓶𝓮𝓼 𝓲𝓷 𝓢𝓮𝓬𝓴𝓽𝓸𝓻*"
-str+=`1. CRAZY\n2. ADAM\n3. AYANOKOJI\n4. EDITH\n5. FRIDAY\n6. GENOS\n7. GIDEON\n8. GOKU\n9. LUFFY\n10. NARUTO\n11. NEZUKO\n12. PARKER\n13. ZEROTWO\n14. Eren Jeager(Coming Soon)\n\n 𝓽𝓱𝓮𝓼𝓮 𝓪𝓻𝓮 𝓽𝓱𝓮 𝓽𝓱𝓮𝓶𝓮𝓼 𝓸𝓯 𝓒𝓻𝓪𝔃𝔂𝓜𝓭 𝓤𝓼𝓮𝓻𝓫𝓸𝓽.\_𝓡𝓮𝓹𝓵𝔂 ${prefix}setvar THEME:LUFFY`
+let str="𝗧𝗛𝗘𝗠𝗘 𝗢𝗙 𝗦𝗔𝗦𝗔𝗞𝗜-𝗠𝗗"
+str+=`1. SASAKI-MD. \n\n 𝖉𝖔𝖓'𝖙 𝖈𝖍𝖆𝖓𝖌𝖊 𝖙𝖍𝖊 𝖙𝖍𝖊𝖒𝖊.\_𝓡𝓮𝓹𝓵𝔂 ${prefix}setvar THEME:SASAKI-MD`
 return citel.reply(str)
     
 }
