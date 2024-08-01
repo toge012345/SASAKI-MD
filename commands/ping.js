@@ -13,20 +13,19 @@
  * @version 2.0.1                                                                                             
  ========================================================
  **/
-
  
-const {cmd} = require('../lib')
-const PastebinAPI = require("pastebin-js");
-pastebin = new PastebinAPI("EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL");
-cmd({
-        pattern: "pastebin",
+const Secktor = require('../lib')
+Secktor.cmd({
+        pattern: "ping",
         desc: "To check ping",
-        category: "user",
+        category: "general",
         filename: __filename,
     },
     async(Void, citel) => {
-        if(!citel.quoted) return citel.reply('Please quote any text to get link.')
-        let data = await pastebin.createPaste(citel.quoted.text, "Secktor-Pastebin")
-        citel.reply('_Here is your link._\n'+data)
+        var inital = new Date().getTime();
+        const { key } = await Void.sendMessage(citel.chat, {text: '```Authorizing...```'});
+        var final = new Date().getTime();
+       // await Secktor.sleep(1000)
+       return await Void.sendMessage(citel.chat, {text: '*Lᴀᴛᴇɴᴄʏ*\n *' + (final - inital) + ' ms* ', edit: key});
     }
 );
