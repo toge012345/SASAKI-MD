@@ -330,20 +330,7 @@ cmd({
         },
         async(Void, citel, text, isAdmins) => {
             let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by TEAM SASAKI.*`
-            const alivtxt = `
-*Hello, ${citel.pushName},*
-_This is  ${tlang().title}._
-${alivemessage}
-
-*Version:-* _1.0.0_
-*Uptime:-* _${runtime(process.uptime())}_
-*Owner:-* _${Config.ownername}_
-*Branch:-* _${Config.BRANCH}_
-
-_Type ${prefix}menu for my command list._
-
-_Powered by ${Config.ownername}_
-`;
+            const alivtxt = `𝖍𝖎 𝕴 𝖆𝖒 𝖘𝖆𝖘𝖆𝖐𝖎-𝖒𝖉 𝖆 𝖂𝖍𝖆𝖙𝖘𝕬𝖕𝖕 𝖇𝖔𝖙 𝖜𝖍𝖎𝖈𝖍 𝖈𝖆𝖓 𝖍𝖊𝖑𝖕 𝖞𝖔𝖚 𝖜𝖎𝖙𝖍 𝖉𝖎𝖋𝖋𝖊𝖗𝖊𝖓𝖙 𝖙𝖆𝖘𝖐𝖘 𝖘𝖚𝖈𝖍 𝖆𝖘 𝖉𝖔𝖜𝖓𝖑𝖔𝖆𝖉𝖎𝖓𝖌 𝖘𝖔𝖓𝖌𝖘 𝖒𝖆𝖐𝖎𝖓𝖌 𝖘𝖙𝖎𝖈𝖐𝖊𝖗𝖘 𝖊𝖙𝖈... 𝖉𝖊𝖛𝖊𝖑𝖔𝖕𝖊𝖉 𝖇𝖞 𝖙𝖍𝖊 𝖘𝖆𝖘𝖆𝖐𝖎 𝖙𝖊𝖆𝖒`;
             let aliveMessage = {
                 image: {
                     url: await botpic(),
