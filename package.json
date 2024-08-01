@@ -7,10 +7,14 @@
                "engines" : { "node": "v20.15.1", "npm": "10.8.2" },
                "license": "Apache-2.0",
    "scripts": {
-                "start": "pm2 start lib/client.js --deep-monitoring --attach --name sasaki --max-memory-restart 490M",
-                "stop": "pm2 stop sasaki",
-                "restart": "pm2 restart sasaki-md"
-                },
+            "run": "pm2 start . --deep-monitoring --attach --name SASAKI-MD || node .",
+            "suhail": "pm2 start . --deep-monitoring --attach --name SASAKI-MD || node .",
+            "start": "pm2 start . --attach --name SASAKI-MD",
+            "stop": "pm2 stop SASAKI-MD",
+            "old-heroku-postbuild": "git clone https://github.com/Alp24ni/SASAKI-MD.git temp && mv temp/.git .git && rm -rf temp && npx puppeteer@latest install  --y",
+            "fis-heroku-postbuild": "git clone https://github.com/Alp24ni/SASAKI-MD.git temp1 && rsync -av temp1/* ./ && rsync -av temp1/.* ./ && rm -rf temp1 && npm i && npx puppeteer@latest install",
+            "dbs--postinstall": "npx puppeteer@latest install --y"
+   },
                "author": "Alp24ni",
               "dependencies": {
                        "@sampandey001/baileys": "latest",
