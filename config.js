@@ -17,7 +17,7 @@ global.website = 'https://github.com/Alp24ni/SASAKI-MD' //wa.me/+242069953931
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/acf07e2ad76c2c142c3b9.jpg'
 module.exports = {
   botname:   process.env.BOT_NAME === undefined ? '𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃' : process.env.BOT_NAME,
-  ownername: process.env.OWNER_NAME === undefined ? 'TEAM SASAKI' : process.env.OWNER_NAME,
+  ownername: process.env.OWNER_NAME === undefined ? '𝗧𝗘𝗔𝗠 𝗦𝗔𝗦𝗔𝗞𝗜' : process.env.OWNER_NAME,
   sessionName:  process.env.SESSION_ID === undefined ? false : process.env.SESSION_ID,
   author:  process.env.PACK_INFO.split(";")[0] === undefined ? '𝐒𝐀𝐒𝐀𝐊𝐈-𝐌𝐃' : process.env.PACK_INFO.split(";")[0],
   auto_read_status :  process.env.AUTO_READ_STATUS === undefined ? false : process.env.AUTO_READ_STATUS,
